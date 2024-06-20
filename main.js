@@ -30,21 +30,27 @@ box3.addEventListener("click",function(){
 },{once:true})
 box4.addEventListener("click",function(){
     clicked(3)
+    checker()
 },{once:true})
 box5.addEventListener("click",function(){
     clicked(4)
+    checker()
 },{once:true})
 box6.addEventListener("click",function(){
     clicked(5)
+    checker()
 },{once:true})
 box7.addEventListener("click",function(){
     clicked(6)
+    checker()
 },{once:true})
 box8.addEventListener("click",function(){
     clicked(7)
+    checker()
 },{once:true})
 box9.addEventListener("click",function(){
     clicked(8)
+    checker()
 },{once:true})
 
 
@@ -81,10 +87,14 @@ let winningComb = [[box1.innerText,box2.innerText,box3.innerText],
 
 let checker = ()=>{
     if(box1.innerText && box2.innerText && box3.innerText == "X" || box1.innerText && box2.innerText && box3.innerText == "O"){
-        h5.innerText =  box1.innerText +"you win"
+        h5.innerText =  box1.innerText +"-you win"
     }else if(box4.innerText && box5.innerText && box6.innerText == "X" || box4.innerText && box5.innerText && box6.innerText == "O"){
-        h5.innerText = box4.innerText + "you win"
+        h5.innerText = box4.innerText + "-you win"
     }else if(box7.innerText && box8.innerText && box9.innerText == "X" || box7.innerText && box8.innerText && box9.innerText == "O"){
-        h5.innerText = box7.innerText +"you win"
+        h5.innerText = box7.innerText +"-you win"
+    }else if(box1.innerText && box5.innerText && box9.innerText == "X" || box1.innerText && box5.innerText && box9.innerText == "O"){
+        h5.innerText = box1.innerText +"-you win"
+    }else if(box3.innerText && box5.innerText && box7.innerText == "X" || box3.innerText && box5.innerText && box7.innerText == "O"){
+        h5.innerText = box3.innerText +"-you win"
     }
 }
