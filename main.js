@@ -19,14 +19,17 @@ let h1 = document.querySelectorAll("h1")
 box1.addEventListener("click",function(){
     clicked(0)
     checker()
+    console.log(box1.innerText);
 },{once:true})
 box2.addEventListener("click",function(){
     clicked(1)
     checker()
+    console.log(box2.innerText);
 },{once:true})
 box3.addEventListener("click",function(){
     clicked(2)
     checker()
+    console.log(box3.innerText);
 },{once:true})
 box4.addEventListener("click",function(){
     clicked(3)
@@ -86,15 +89,17 @@ let winningComb = [[box1.innerText,box2.innerText,box3.innerText],
 // if(winningComb[0] == "X")
 
 let checker = ()=>{
-    if(box1.innerText && box2.innerText && box3.innerText == "X" || box1.innerText && box2.innerText && box3.innerText == "O"){
+    if(box1.innerText == "X" && box2.innerText == "X" && box3.innerText == "X" || box1.innerText == "O" && box2.innerText == "O" && box3.innerText == "O"){
         h5.innerText =  box1.innerText +"-you win"
-    }else if(box4.innerText && box5.innerText && box6.innerText == "X" || box4.innerText && box5.innerText && box6.innerText == "O"){
+    }else if(box4.innerText == "X" && box5.innerText == "X" && box6.innerText == "X" || box4.innerText == "O" && box5.innerText == "O" && box6.innerText == "O"){
         h5.innerText = box4.innerText + "-you win"
-    }else if(box7.innerText && box8.innerText && box9.innerText == "X" || box7.innerText && box8.innerText && box9.innerText == "O"){
+    }else if(box7.innerText == "X" && box8.innerText == "X" && box9.innerText == "X" || box7.innerText == "O" && box8.innerText == "O" && box9.innerText == "O"){
         h5.innerText = box7.innerText +"-you win"
-    }else if(box1.innerText && box5.innerText && box9.innerText == "X" || box1.innerText && box5.innerText && box9.innerText == "O"){
+    }else if(box1.innerText == "X" && box5.innerText == "X" && box9.innerText == "X" || box1.innerText == "O" && box5.innerText == "O" && box9.innerText == "O"){
         h5.innerText = box1.innerText +"-you win"
-    }else if(box3.innerText && box5.innerText && box7.innerText == "X" || box3.innerText && box5.innerText && box7.innerText == "O"){
+    }else if(box3.innerText == "X" && box5.innerText == "X" && box7.innerText == "X" || box3.innerText == "O" && box5.innerText == "O" && box7.innerText == "O"){
         h5.innerText = box3.innerText +"-you win"
+    }else{
+
     }
 }
